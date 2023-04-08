@@ -6,7 +6,8 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 
-
+# The first method
+# GET POST
 @api_view(['GET','POST'])
 def list_student(request):
     # GET
@@ -47,7 +48,7 @@ def student(request, id):
         return Response(status= status.HTTP_204_NO_CONTENT)
 
 
-
+# The second method
 #  view set GET POST DELETE PUT
 class StudentViewSet(viewsets.ModelViewSet):
     queryset = Student.objects.all()
